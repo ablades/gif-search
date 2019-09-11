@@ -1,8 +1,21 @@
 
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
+{% extends 'base.html' %}
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string -->
+{% block title %}
+    Gif Searching!
+{% endblock %}
+
+{% block body %}
+<form action='/index'>
+    <p>
+        Enter a GIF search parameter: 
+        <input type="search" name="search_box"/>
+    </p>
+</form>
+{% endblock %}
 
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
