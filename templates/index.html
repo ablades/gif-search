@@ -5,16 +5,20 @@
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string -->
 {% block title %}
-    Gif Searching!
 {% endblock %}
 
 {% block body %}
-<form action='/index'>
-    <p>
+<form action='/'>
         Enter a GIF search parameter: 
-        <input type="search" name="search_box"/>
-    </p>
+        <input type="search" name="search"/>
+        <button type="submit">Submit</button>
 </form>
+
+<p>
+        {% for gif in gifs %}
+            {% include 'gif.html'  %}
+        {% endfor %}
+</p>
 {% endblock %}
 
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
