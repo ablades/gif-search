@@ -23,7 +23,7 @@ def index():
         search = None
         r = requests.get("https://api.tenor.com/v1/trending?", params)
     elif button_request == "random":
-        search = 'random'
+        params["q"] = "random"
         r = requests.get("https://api.tenor.com/v1/random?", params)
 
     #Make an API call to Tenor using the 'requests' library
