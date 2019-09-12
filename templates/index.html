@@ -14,10 +14,16 @@
         <button type="submit">Submit</button>
 </form>
 
+<form action='/'>
+    <button type="submit" name="button" value="trending">Trending Gifs</button>
+    <button type="submit" name="button" value="random">Random Gifs</button>
+</form>
+
 <p>
         {% for gif in gifs %}
             {% include 'gif.html'  %}
-        {% endfor %}
+        {% endfor %}  
+
 </p>
 {% endblock %}
 
