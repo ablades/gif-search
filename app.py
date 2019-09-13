@@ -7,7 +7,6 @@ app = Flask(__name__)
 @app.route('/', methods = ['GET', 'POST'])
 def index():
     """Return homepage."""
-
     #Extract query term from url
     search = request.args.get("search")
 
@@ -17,23 +16,22 @@ def index():
     "limit": 10}
 
     button_request = request.args.get('button')
-
+    
     r = requests.get("https://api.tenor.com/v1/search", params)
+    
+    #Alter request based on selection
     if button_request == "trending":
-        search = None
+        params["q"] = None
         r = requests.get("https://api.tenor.com/v1/trending?", params)
     elif button_request == "random":
         params["q"] = "random"
         r = requests.get("https://api.tenor.com/v1/random?", params)
-
-    #Make an API call to Tenor using the 'requests' library
-    # r = requests.get("https://api.tenor.com/v1/search", params)
-    #Get post request
+    
+    print(r.status_code)
 
     gifs = json.loads(r.content)['results']
-    # TODO: Render the 'index.html' template, passing the gifs as a named parameter
-    return render_template(
-        "index.html", gifs=gifs)
+
+    return render_template("index.html", gifs=gifs)
 
 
 if __name__ == '__main__':
