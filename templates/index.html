@@ -1,30 +1,26 @@
-
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 {% extends 'base.html' %}
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string -->
-{% block title %}
-{% endblock %}
-
-{% block body %}
-<form action='/'>
-        Enter a GIF search parameter: 
-        <input type="search" name="search"/>
+{% block title %} {% endblock %} {% block body %}
+<div class="card">
+    <form action='/'>
+        Enter a GIF search parameter:
+        <input type="search" name="search" />
         <button type="submit">Submit</button>
-</form>
+    </form>
 
-<form action='/'>
-    <button type="submit" name="button" value="trending">Trending Gifs</button>
-    <button type="submit" name="button" value="random">Random Gifs</button>
-</form>
+    <form action='/'>
+        <button type="submit" name="button" value="trending">Trending Gifs</button>
+        <button type="submit" name="button" value="random">Random Gifs</button>
+    </form>
 
-<p>
-        {% for gif in gifs %}
-            {% include 'gif.html'  %}
-        {% endfor %}  
+    <p>
+        {% for gif in gifs %} {% include 'gif.html' %} {% endfor %}
 
-</p>
+    </p>
+</div>
 {% endblock %}
 
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
