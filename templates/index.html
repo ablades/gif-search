@@ -5,33 +5,36 @@
     the search term to the query string -->
 {% block title %} {% endblock %} {% block body %}
 
+<header>
+    <ul>
+        <form action='/'>
+            <li>
+                <div id="search">
+                    <label for="search">Enter a GIF search parameter:</label>
+                    <input type="search" name="search" />
+                </div>
+            </li>
+            <li><button class="button" type="submit">Submit</button></li>
+        </form>
 
-
-    <form action='/'>
-            Enter a GIF search parameter:
-        <input type="search" name="search" />
-            <button class= "button" type="submit">Submit</button>
-    </form>
-
-    <!--Buttons-->
-    <form action='/'>
-        <button class= "button" type="submit" name="button" value="trending">Trending Gifs</button>
-        <button class= "button" type="submit" name="button" value="random">Random Gifs</button> 
-    </form>
-
+        <!--Buttons-->
+        <form action='/'>
+            <li><button class="button" type="submit" name="button" value="trending">Trending Gifs</button></li>
+            <li><button class="button" type="submit" name="button" value="random">Random Gifs</button></li>
+        </form>
+    </ul>
+</header>
 
 <!-- Check for and print gifs-->
-    {% if gifs|length == 0 %}
-        <div>
-            <h1>eRrOR HaLp pL0x</h1>
-        </div>
-    {% else %}
-        <div class="grid-container">
-                {% for gif in gifs %} 
-                    {% include 'gif.html' %}
-                {% endfor %} 
-        </div>
-    {% endif %}
+{% if gifs|length == 0 %}
+<div>
+    <h1>eRrOR HaLp pL0x</h1>
+</div>
+{% else %}
+<div class="grid-container">
+    {% for gif in gifs %} {% include 'gif.html' %} {% endfor %}
+</div>
+{% endif %}
 </p>
 
 {% endblock %}
