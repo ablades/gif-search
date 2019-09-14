@@ -5,17 +5,18 @@
     the search term to the query string -->
 {% block title %} {% endblock %} {% block body %}
 
+
+
     <form action='/'>
             Enter a GIF search parameter:
         <input type="search" name="search" />
-            <button type="submit">Submit</button>
-    
+            <button class= "button" type="submit">Submit</button>
     </form>
 
     <!--Buttons-->
     <form action='/'>
-        <button type="submit" name="button" value="trending">Trending Gifs</button>
-        <button type="submit" name="button" value="random">Random Gifs</button> 
+        <button class= "button" type="submit" name="button" value="trending">Trending Gifs</button>
+        <button class= "button" type="submit" name="button" value="random">Random Gifs</button> 
     </form>
 
 
@@ -25,11 +26,11 @@
             <h1>eRrOR HaLp pL0x</h1>
         </div>
     {% else %}
-    <div class="grid-container">
-            {% for gif in gifs %} 
-                {% include 'gif.html' %}
-            {% endfor %} 
-    </div>
+        <div class="grid-container">
+                {% for gif in gifs %} 
+                    {% include 'gif.html' %}
+                {% endfor %} 
+        </div>
     {% endif %}
 </p>
 
