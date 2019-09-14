@@ -1,0 +1,11 @@
+.grid-container {
+    display: grid;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    background-color: green;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container {
+  background-color: blue
+}

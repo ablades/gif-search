@@ -27,8 +27,6 @@ def index():
         params["q"] = "random"
         r = requests.get("https://api.tenor.com/v1/random?", params)
     
-    print(r.status_code)
-
     gifs = json.loads(r.content)['results']
 
     return render_template("index.html", gifs=gifs)
