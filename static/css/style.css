@@ -2,6 +2,7 @@ body {
     font-family: 'Assistant', sans-serif;
     margin: 0;
     padding: 0;
+    background: repeating-linear-gradient( 45deg, #fff, #009 5px, #fff 15px, #009 20px);
 }
 
 .grid-container {
@@ -9,20 +10,29 @@ body {
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
+    width: 80vw;
+    margin: auto;
 }
 
 .grid-item {
     border-style: solid;
 }
 
+.card:last-of-type {
+    grid-column: 2;
+}
+
 
 /*https://www.w3schools.com/howto/howto_css_cards.asp*/
 
 .card {
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     transition: 0.3s;
-    padding: 4px;
+    align-content: center;
+    justify-content: center;
+    width: 21vw;
+    padding: 5%;
 }
 
 .card:hover {
