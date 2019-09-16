@@ -64,8 +64,8 @@ ul {
 #navbar li {
     float: left;
     list-style-type: none;
-    width: 25%;
-    height: 100%;
+    width: 20%;
+    height: 10vh;
 }
 
 form {
@@ -93,9 +93,10 @@ form {
 
 #search {
     display: grid;
-    padding: 2%;
+    padding: 1%;
     background-color: #4CAF50;
     border: black 1px solid;
+    height: 10vh;
 }
 
 #search:hover {
@@ -116,9 +117,24 @@ input[type=search] {
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-  }
-  
-  /* When the input field gets focus, change its width to 100% */
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+
 input[type=search]:focus {
     width: 100%;
+}
+
+#title {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #4CAF50;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border: black 1px solid;
+}
+
+#title:hover {
+    background-color: chartreuse;
 }
