@@ -11,7 +11,7 @@ body {
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
     width: 80vw;
-    margin: auto;
+    margin: 20px auto auto auto;
 }
 
 .grid-item {
@@ -58,7 +58,7 @@ ul {
     width: 100%;
     height: 100%;
     justify-content: stretch;
-    margin-bottom: 2%;
+    margin-bottom: 8%;
 }
 
 #navbar li {
