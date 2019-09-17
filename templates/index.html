@@ -7,30 +7,17 @@
 
 <header>
     <ul id="navbar">
+
         <form action='/'>
             <li>
                 <button id="title" class="button" value='#'>Get-Gif-10</button>
             </li>
+
             <li>
-                <button id="search" class="button" disabled>
                     <label for="search">Enter a GIF search parameter:</label>
                     <input type="text" name="search" id="search" />
-                    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-                    <script>
-                        // https://www.tutorialrepublic.com/faq/how-to-detect-change-in-a-text-input-box-in-jquery.php
-                        $(document).ready(function(){
-                            $("#search").on("input", ":text", function(){
-                                // Print entered value in a div box
-                                $("#result").text($(this).val());
-                                history.replaceState({}, $(this).val(), "?search=" + $(this).val());
-                                setTimeout(function() {}, 100)
-                                history.go();
-                            });
-                        });
-                    </script>
-                </button>
             </li>
-            <li><button class="button" type="submit" onclick="location.href='/?search' + $('#search').val()">Submit</button></li>
+            <li><button class="button" type="submit" >Submit</button></li>
             <li><button class="button" type="submit" name="button" value="trending">Trending Gifs</button></li>
             <li><button class="button" type="submit" name="button" value="random">Random Gifs</button></li>
         </form>
@@ -47,6 +34,5 @@
     {% for gif in gifs %} {% include 'gif.html' %} {% endfor %}
 </div>
 {% endif %}
-</p>
 
 {% endblock %}
