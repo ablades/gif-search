@@ -113,6 +113,7 @@ form {
 #search input {
     grid-column: 1;
     grid-row: 2;
+    height: 20px;
 }
 
 input[type=search],
