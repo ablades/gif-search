@@ -3,37 +3,57 @@
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string -->
-{% block title %} {% endblock %} {% block body %}
+{% block title %} {% endblock %} 
 
-<header>
-    <ul id="navbar">
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">GIF Search</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
 
-        <form action='/'>
-            <li>
-                <button id="title" class="button" value='#'>Get-Gif-10</button>
+            <li class="nav-item">
+                <button type="button" name="button" value= "Trending" class="btn btn-light">Trending</button>
             </li>
 
-            <li>
-                    <label for="search">Enter a GIF search parameter:</label>
-                    <input type="text" name="search" id="search" />
+            <li class="nav-item">
+                    <button type="button" name="button" value= "Random" class="btn btn-light">Random</button>
             </li>
-            <li><button class="button" type="submit" >Submit</button></li>
-            <li><button class="button" type="submit" name="button" value="trending">Trending Gifs</button></li>
-            <li><button class="button" type="submit" name="button" value="random">Random Gifs</button></li>
-        </form>
-    </ul>
-</header>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
 
-<!-- Check for and print gifs-->
-{% if gifs|length == 0 %}
-<div>
-    <h1>eRrOR HaLp pL0x</h1>
-</div>
-{% else %}
-<div class="grid-container">
-    {% for gif in gifs %} {% include 'gif.html' %} {% endfor %}
-</div>
-{% endif %}
+      {% if gifs|length == 0 %}
+        <div>
+            <h1>No GIFS Found</h1>
+        </div>
+
+      {% else %}
+        {%set count = 0 %}
+        <div class="row">
+            {% for gif in gifs %} 
+                <div class="col-6 col-sm-4">
+                    {% include 'gif.html' %} 
+                </div>
+
+                {% if count == 3 %}
+                    </div>
+                    <div class="w-100 d-none d-md-block"></div>
+                    {% set count = 0 %}
+                {% endif %}
+
+                {% set count = count + 1 %}
+
+            {% endfor %}
+        </div>
+      {% endif %}
 
 {% endblock %}
 
