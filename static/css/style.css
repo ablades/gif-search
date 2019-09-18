@@ -7,6 +7,10 @@
     margin: 20px;
 }
 
+.col-md-3 :hover{
+    outline: whitesmoke solid 25px;
+}
+
 html body {
     background-color: #343a40;
 }
