@@ -13,7 +13,7 @@ def index():
     params = {
     "q" : search,
     "key": '4HIPRMNS9U52',
-    "limit": 10}
+    "limit": 9}
 
     button_request = request.args.get('button')
     
