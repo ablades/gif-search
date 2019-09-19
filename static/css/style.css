@@ -15,6 +15,7 @@ body {
 
 .grid-item {
     border-style: solid;
+    max-width: 90%;
 }
 
 .card:last-of-type {
@@ -30,8 +31,8 @@ body {
     transition: 0.3s;
     align-content: center;
     justify-content: center;
-    width: 21vw;
-    padding: 5%;
+    max-width: 70%;
+    padding: 8%;
 }
 
 .card:hover {
