@@ -23,7 +23,10 @@ master branch:
 - Audi Blades
 - Megan OBryan
 
-bootstrap
+bootstrap branch
+- Audi Blades
+
+index branch
 - Audi Blades
 
 ## Resources and Tools
