@@ -1,6 +1,6 @@
 # Jraphics Interchange Format Search
-
-A Gif Search website using Tenor API. 
+## About
+This project uses the Tenor API to present 10 gifs based on a given search query. This makes use of a home page for trending gifs, a search bar to type specific queries, and buttons to return trending and random gifs. This is built on Flask, Jinja, and Make School's starter code for this project. 
 
 ## Implemented Requirements and Stretch Goals
 
@@ -16,8 +16,23 @@ A Gif Search website using Tenor API.
 - Use of center align where appropriate
 - Gifs displayed in grid format
 - Buttons provided for trending and random gif search
-- [WIP] Type-ahead
+- Some Type-ahead functionality
 
-## TODO: Contributions
+## Contributions
+master branch:
+- Audi Blades
+- Megan OBryan
 
-## TODO: Resources
+bootstrap
+- Audi Blades
+
+## Resources and Tools
+Flask, Jinja, Tenor API
+
+## Acknowledgements
+### Jquery for Type Ahead
+https://www.tutorialrepublic.com/faq/how-to-detect-change-in-a-text-input-box-in-jquery.php
+### Card Formatting
+https://www.w3schools.com/howto/howto_css_cards.asp
+### Starter Code
+https://github.com/Make-School-Labs/Gif-Search-Starter
