@@ -1,8 +1,13 @@
+/*background*/
+
 body {
     margin: 0;
     padding: 0;
     background: cornsilk;
 }
+
+
+/*grid layout*/
 
 .grid-container {
     display: grid;
@@ -18,12 +23,18 @@ body {
     max-width: 90%;
 }
 
+
+/*grid layout for last item*/
+
 .card:last-of-type {
     grid-column: 2;
 }
 
 
 /*https://www.w3schools.com/howto/howto_css_cards.asp*/
+
+
+/*card formatting*/
 
 .card {
     background-color: lightgray;
@@ -35,12 +46,12 @@ body {
     padding: 8%;
 }
 
+
+/*shadow effect*/
+
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
-
-
-/*https://www.w3schools.com/howto/howto_css_cards.asp*/
 
 header {
     width: 100%;
@@ -52,6 +63,9 @@ ul {
     overflow: hidden;
 }
 
+
+/*head of page navbar*/
+
 #navbar {
     margin: 0;
     padding: 0;
@@ -61,6 +75,9 @@ ul {
     margin-bottom: 8%;
 }
 
+
+/*elements in navbar*/
+
 #navbar li {
     float: left;
     list-style-type: none;
@@ -68,10 +85,16 @@ ul {
     height: 10vh;
 }
 
+
+/*details of navbar*/
+
 form {
     color: black;
     height: 100%;
 }
+
+
+/*elements in navbar*/
 
 .button {
     background-color: lightgray;
@@ -89,9 +112,15 @@ form {
     font-family: 'Work Sans', sans-serif;
 }
 
+
+/*hover changes color*/
+
 .button:hover {
     background-color: gray;
 }
+
+
+/*search input*/
 
 #search {
     display: grid;
@@ -106,10 +135,16 @@ form {
     background-color: gray;
 }
 
+
+/*positioning search inputs*/
+
 #search label {
     grid-column: 1;
     grid-row: 1;
 }
+
+
+/*positioning search inputs*/
 
 #search input {
     grid-column: 1;
@@ -117,9 +152,8 @@ form {
     height: 20px;
 }
 
-input[type=search],
-#search:active {
-    width: 130px;
+input[type=search] {
+    width: 10%;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
@@ -127,9 +161,12 @@ input[type=search],
 
 /* When the input field gets focus, change its width to 100% */
 
-input[type=search]:focus {
+input[type=search]:active {
     width: 100%;
 }
+
+
+/*title in corner*/
 
 #title {
     font-family: 'Press Start 2P', cursive;
@@ -140,6 +177,9 @@ input[type=search]:focus {
     border: 0;
     border: black 1px solid;
 }
+
+
+/*changes like button*/
 
 #title:hover {
     background-color: gray;
