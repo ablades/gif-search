@@ -3,7 +3,7 @@
 ![Gif Site Demo](gifsearch.gif)
 
 ## About
-This Gif search project was assigned in  Backend Web (BEW1.1) it displays gifs in a grid format using [Tenor's API](https://tenor.com/gifapi). This is the bootstrap branch that I did solo to get more experience with front end technologies improve. To see the group variant done with [Megan O'Bryan](https://github.com/atleastzero) please refer to the [master branch](https://github.com/ablades/gif-search/tree/master). I used Bootstrap to build the front end of the website. Flask and Jinja were used to build the backend.
+Gif Search displays gifs in a grid format using [Tenor's API](https://tenor.com/gifapi). This is the bootstrap branch that I did solo to get more experience with front end technologies improve. To see the group variant done with [Megan O'Bryan](https://github.com/atleastzero) please refer to the [master branch](https://github.com/ablades/gif-search/tree/master). I used Bootstrap to build the front end of the website. Flask and Jinja were used to build the backend.
 
 ## Authors
 
