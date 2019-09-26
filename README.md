@@ -1,4 +1,4 @@
-# Jraphics Interchange Format Search
+# Graphics Interchange Format Search
 
 A Gif Search website using Tenor API. 
 
